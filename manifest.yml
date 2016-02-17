@@ -19,15 +19,9 @@ url_to_dependency_map:
 
 dependencies:
   - name: node
-    version: 0.10.43
-    uri: https://pivotal-buildpacks.s3.amazonaws.com/concourse-binaries/node/node-0.10.43-linux-x64.tgz
-    md5: 10eb71941ea92ac61aa470396a590ddd
-    cf_stacks:
-      - cflinuxfs2
-  - name: node
-    version: 0.10.42
-    uri: https://pivotal-buildpacks.s3.amazonaws.com/concourse-binaries/node/node-0.10.42-linux-x64.tgz
-    md5: f475ba3d10a8e6533051fa144c6bb100
+    version: 0.10.41
+    uri: https://pivotal-buildpacks.s3.amazonaws.com/concourse-binaries/node/node-0.10.41-linux-x64.tgz
+    md5: 4258bc50d36bf0e6ee54073ffff464c5
     cf_stacks:
       - cflinuxfs2
   - name: node

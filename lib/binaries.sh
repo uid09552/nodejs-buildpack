@@ -63,3 +63,11 @@ install_npm() {
     fi
   fi
 }
+
+
+install_appdynamics() {
+  local build_dir=${1:-}
+  echo "Downloading and installing AppDynamics Related Jars"
+  npm install --prefix $build_dir --unsafe-perm appdynamics
+}
+
