@@ -68,7 +68,7 @@ create_env() {
 }
 
 update_server() {
-  if [[ ${VCAP_SERVICES} == *"appdynamics"* ]] 
+  if [[ "$VCAP_SERVICES" ]] && [[ ${VCAP_SERVICES} == *"appdynamics"* ]] 
   then
     update_server_appd "$BUILD_DIR"
   fi
@@ -138,7 +138,7 @@ build_dependencies() {
   else
     install_node_modules "$BUILD_DIR"
   fi
-  if [[ ${VCAP_SERVICES} == *"appdynamics"* ]] 
+  if [[ "$VCAP_SERVICES" ]] && [[ ${VCAP_SERVICES} == *"appdynamics"* ]] 
   then
     echo "Install Appdynamics Dependencies"
     install_appdynamics  "$BUILD_DIR"
