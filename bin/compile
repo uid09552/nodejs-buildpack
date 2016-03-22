@@ -141,7 +141,7 @@ build_dependencies() {
   if [[ "$VCAP_SERVICES" ]] && [[ ${VCAP_SERVICES} == *"appdynamics"* ]] 
   then
     echo "Install Appdynamics Dependencies"
-    install_appdynamics "$BUILD_DIR"
+    install_appdynamics
   fi
 }
 
