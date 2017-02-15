@@ -28,7 +28,8 @@ then
   APPDYNAMICS_AGENT_APPLICATION_NAME=$(echo "${VCAP_APPLICATION-}" | $JQ --raw-output .application_name)
   APPDYNAMICS_AGENT_TIER_NAME=$(echo "${VCAP_APPLICATION-}" | $JQ --raw-output .application_name)
   #APPDYNAMICS_AGENT_NODE_NAME=$(echo "${VCAP_APPLICATION-}" | $JQ --raw-output .application_name)
-
+  echo "AppDyn Agent Tier Name"
+  echo $APPDYNAMICS_AGENT_TIER_NAME
   if [ ! -z "${APPDYNAMICS_AGENT_ACCOUNT_ACCESS_KEY-}" ];
   then
     mkdir -p $BUILD_DIR/.profile.d
@@ -60,3 +61,5 @@ then
     #fi
   fi
 fi
+echo "Check TierName again"
+echo $APPDYNAMICS_AGENT_TIER_NAME
