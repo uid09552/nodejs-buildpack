@@ -11,6 +11,7 @@ BP_DIR=$SCRIPT_PATH/../../..
 
 . $SCRIPT_PATH/../../json.sh
 echo $VCAP_SERVICES
+echo "appdynamics install.sh"
 if [ `echo $VCAP_SERVICES | grep -c "appdynamics" ` -gt 0 ];
 then 
   key="appdynamics"
