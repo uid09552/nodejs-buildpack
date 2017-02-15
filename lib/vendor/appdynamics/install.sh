@@ -10,9 +10,9 @@ BUILD_DIR=$1
 BP_DIR=$SCRIPT_PATH/../../..
 
 . $SCRIPT_PATH/../../json.sh
-
+echo $VCAP_SERVICES
 if [ `echo $VCAP_SERVICES | grep -c "appdynamics" ` -gt 0 ];
-then
+then 
   key="appdynamics"
   if [ `echo $VCAP_SERVICES | grep -c "user-provided" ` -gt 0 ];
   then
